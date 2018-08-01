@@ -55,4 +55,15 @@ database.ref().on("child_added", function(childSnapshot) {
   console.log(destination);
   console.log(trainStart);
   console.log(frequency);
+
+    // Create the new row
+    var newRow = $("<tr>").append(
+        $("<td>").text(trainName),
+        $("<td>").text(destination),
+        $("<td>").text(frequency),
+      );
+    
+      // Append the new row to the table
+      $("tbody").append(newRow);
+
 });
